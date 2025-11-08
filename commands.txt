@@ -1,0 +1,3 @@
+java -jar target/p22.jar
+
+java -jar target/web_site-1.0-SNAPSHOT.jar
