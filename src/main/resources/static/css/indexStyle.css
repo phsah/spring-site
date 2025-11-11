@@ -1,0 +1,256 @@
+body
+{
+    background-color: #000000;
+}
+
+.main-row
+{
+    background-color: none;
+}
+
+.line
+{
+    border-bottom: 1px solid #FFFAFA;
+}
+
+h1
+{
+    color: #000000;
+    text-shadow: 3.5px 3.3px 2.5px #070716;
+    opacity: 0;
+    position: relative;
+    animation: slideTop 0.75s ease-out, fadeIn 1s forwards;
+}
+
+.background-video
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video video
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.div-buttons
+{
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #070716;
+    opacity: 0;
+    position: relative;
+    animation: slideTop 1s ease-out, fadeIn 1s forwards;
+}
+
+.div-buttons-two
+{
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #070716;
+    opacity: 0;
+    position: relative;
+    animation: slideTop 1.25s ease-out, fadeIn 1s forwards;
+}
+
+.button-info
+{
+    color: #FFFAFA;
+    background-color: #000000;
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    opacity: 100%;
+    transition: opacity 0.35s ease;
+}
+
+.button-info:hover
+{
+    opacity: 50%;
+    transition: opacity 0.35s ease;
+}
+
+.button-contact
+{
+    color: #FFFAFA;
+    background-color: #000000;
+    border-radius: 20px;
+    border: none;
+    width: 50px;
+    height: 40px;
+    font-size: 17px;
+    opacity: 100%;
+    transition: opacity 0.35s ease;
+}
+
+.button-contact:hover
+{
+    opacity: 50%;
+    transition: opacity 0.35s ease;
+}
+
+.main-text
+{
+    font-size: clamp(30px, 5vw + 20px, 55px);
+    color: #000000;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideLeft 1.5s ease-out, fadeIn 1s forwards;
+    position: relative;
+}
+
+.button-about-me
+{
+    color: #FFFAFA;
+    background-color: #000000;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+    opacity: 0;
+    animation: slideLeft 1.75s ease-out, fadeIn 1s forwards, shadows 1s infinite alternate;
+    position: relative;
+    transform: scale(1.00);
+    transition: transform 0.35s ease;
+}
+
+.button-about-me:hover
+{
+    transform: scale(1.05);
+    transition: transform 0.35s ease;
+}
+
+@keyframes shadows
+{
+    0%
+    {
+        box-shadow: 0 0 5px #070716;
+    }
+    100%
+    {
+        box-shadow: 0 0 25px #070716;
+    }
+}
+
+.div-space
+{
+    display: block;
+}
+
+.div-content
+{
+    background: #F1F3F1;
+    border-radius: 15px;
+    border: 3px solid #000000;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 0 50px #070716;
+    opacity: 0%;
+    animation: slideDown 1.5s ease-out, fadeIn 1s forwards;
+}
+
+.div-content-second
+{
+    background: #F1F3F1;
+    border-radius: 15px;
+    border: 3px solid #000000;
+    width: 300px;
+    height: 185px;
+    box-shadow: 0 0 50px #070716;
+    opacity: 0%;
+    animation: slideDown 1.75s ease-out, fadeIn 1s forwards;
+}
+
+.second-text
+{
+    font-size: clamp(5px, 5vw + 10px, 23px);
+    color: #000000;
+}
+
+.second-text-info
+{
+    font-size: clamp(5px, 5vw + 10px, 15px);
+    color: #000000;
+}
+
+.div-footer
+{
+    border-radius: 15px;
+    background-color: #000000;
+    width: 450px;
+    height: 30px;
+    animation: slideDown 1s ease-out, fadeIn 1s forwards;
+}
+
+.footer-text
+{
+    color: #FFFAFA;
+    font-size: clamp(5px, 3vw, 9px);
+}
+
+@media (max-width: 768px)
+{
+    .div-space
+    {
+        display: none !important;
+    }
+}
+
+@keyframes fadeIn
+{
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft
+{
+    0%
+    {
+        transform: translateX(-2000px);
+        opacity: 0%;
+    }
+    100%
+    {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes slideTop
+{
+    0%
+    {
+        transform: translateY(-75px);
+        opacity: 0%;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes slideDown
+{
+    0%
+    {
+        transform: translateY(350px);
+        opacity: 0%;
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
