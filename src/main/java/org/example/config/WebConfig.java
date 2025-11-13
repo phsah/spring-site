@@ -17,12 +17,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // Serve /uploads/** URLs from the filesystem "uploads" folder
-        registry.addResourceHandler("/"+uploadDir+"/**")
+        registry
+                .addResourceHandler("/"+uploadDir+"/**")
                 .addResourceLocations("file:"+uploadDir+"/");
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
     }
 }
